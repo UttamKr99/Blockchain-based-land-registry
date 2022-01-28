@@ -12,7 +12,7 @@ function RegisterLayout() {
 
   return (
     <>
-      <div class={!set ? "modal is-active" : "modal"}>
+      <div class={"modal " + !set ? "is-active" : ""}>
         <div class="modal-background"></div>
         <div class="modal-card">
           <header class="modal-card-head">
