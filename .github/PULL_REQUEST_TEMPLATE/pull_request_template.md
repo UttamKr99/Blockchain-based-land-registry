@@ -1,10 +1,12 @@
 ### Description
 
-<Description>
+<!--Include a summary of the change and relevant motivation/context. List any dependencies that are required for this change.-->
 
-Fixes issue #
+Fixes #ISSUE
 
 ### Type of Change:
-- <Point wise Changes>
+<!--**Delete irrelevant options.**-->
 
-
+- Bugs
+- New Feature
+- Documentation
