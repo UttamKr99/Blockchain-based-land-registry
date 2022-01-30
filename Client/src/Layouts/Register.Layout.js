@@ -1,42 +1,44 @@
 import React, { useState } from 'react';
 import RegisterPage from './Register';
 function RegisterLayout() {
-  const [role, setRole] = useState("Choose");
+  const [role, setRole] = useState('');
   const [set, superset] = useState(false);
   const toggle = () => {
-    superset(!set);
+    if (role !== '') superset(!set);
   };
-  const modleHandler = (e) => {
+  const modelHandler = (e) => {
     setRole(e.target.value);
   };
 
   return (
     <>
-      <div class={"modal " + !set ? "is-active" : ""}>
-        <div class="modal-background"></div>
-        <div class="modal-card">
-          <header class="modal-card-head">
-            <p class="modal-card-title">Select Your Role</p>
+      <div className={!set ? 'modal is-active' : 'modal'}>
+        <div className="modal-background"></div>
+        <div className="modal-card">
+          <header className="modal-card-head">
+            <p className="modal-card-title">Select Your Role</p>
           </header>
-          <section class="modal-card-body">
-            <div className="is-flex is-justify-content-center">
-              <div class="select" value={role} onChange={modleHandler}>
-                <select>
-                  <option selected>Choose</option>
+          <section className="modal-card-body">
+            <div classNameName="is-flex is-justify-content-center">
+              <div className="select">
+                <select value={role} onChange={modelHandler}>
+                  <option disabled default value>
+                    Choose
+                  </option>
                   <option value="Seller">Seller</option>
                   <option value="Buyer">Buyer</option>
                 </select>
               </div>
             </div>
           </section>
-          <footer class="modal-card-foot">
-            <button class="button is-success" onClick={toggle}>
+          <footer className="modal-card-foot">
+            <button className="button is-success" onClick={toggle}>
               Done
-            </button>{" "}
+            </button>
           </footer>
         </div>
       </div>
-      <RegisterPage />
+      <RegisterPage user={role} />
     </>
   );
 }
