@@ -1,12 +1,12 @@
-import './App.css';
-import Homepage from './Layouts/Homepage';
-import Login from './Layouts/Register.Layout';
+import './App.css'
+import Homepage from './Layouts/Homepage'
+import Login from './Layouts/Register.Layout'
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Login />
     </div>
-  );
+  ) // <Homepage />
 }
 
-export default App;
+export default App

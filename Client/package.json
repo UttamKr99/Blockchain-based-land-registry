@@ -16,7 +16,9 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "format": "prettier --write \"src/**/*.{js,jsx}\"",
+        "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
     },
     "browserslist": {
         "production": [
@@ -29,5 +31,9 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "eslint": "^8.8.0",
+        "eslint-config-prettier": "^8.3.0"
     }
 }

@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import RegisterPage from './Register';
+import React, { useState } from 'react'
+import RegisterPage from './Register'
 function RegisterLayout() {
-  const [role, setRole] = useState('');
-  const [set, superset] = useState(false);
+  const [role, setRole] = useState('')
+  const [set, superset] = useState(false)
   const toggle = () => {
-    if (role !== '') superset(!set);
-  };
+    if (role !== '') superset(!set)
+  }
   const modelHandler = (e) => {
-    setRole(e.target.value);
-  };
+    setRole(e.target.value)
+  }
 
   return (
     <>
@@ -40,6 +40,6 @@ function RegisterLayout() {
       </div>
       <RegisterPage user={role} />
     </>
-  );
+  )
 }
-export default RegisterLayout;
+export default RegisterLayout
