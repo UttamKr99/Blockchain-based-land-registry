@@ -19,7 +19,7 @@ function RegisterLayout() {
             <p className="modal-card-title">Select Your Role</p>
           </header>
           <section className="modal-card-body">
-            <div classNameName="is-flex is-justify-content-center">
+            <div classNameName="is-flex is-justify-content-center ">
               <div className="select">
                 <select value={role} onChange={modelHandler}>
                   <option disabled default value>
