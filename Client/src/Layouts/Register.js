@@ -43,7 +43,7 @@ function Register() {
                 <input
                   class="input"
                   type="text"
-                  placeholder="e.g. alexsmith@gmail.com"
+                  placeholder="e.g. 01/01/2000"
                 />
               </div>
             </div>
@@ -53,7 +53,7 @@ function Register() {
                 <input
                   class="input"
                   type="text"
-                  placeholder="e.g. Mahatma Gandhi Road, Pune, Maharashtra"
+                  placeholder="e.g. Mahatma Gandhi Road, Lucknow,Uttar Pradesh"
                 />
               </div>
             </div>
@@ -62,7 +62,7 @@ function Register() {
               <div class="control">
                 <input
                   class="input"
-                  type="number"
+                  type="tel"
                   placeholder="e.g. 220000"
                   required
                 />

@@ -25,7 +25,7 @@ function RegisterLayout() {
                                           value={role}
                                           onChange={modelHandler}>
                                           <option disabled default value>
-                                               Choose
+                                             Select Role
                                           </option>
                                           <option value="Seller">Seller</option>
                                           <option value="Buyer">Buyer</option>
