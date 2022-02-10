@@ -5,8 +5,9 @@ import Login from './Layouts/Register.Layout';
 function App() {
      return (
           <div className="App">
-               <Navbar />
+               {/* <Navbar /> */}
                <Login />
+               {/* <Homepage /> */}
           </div>
      ); // <Homepage />
      //

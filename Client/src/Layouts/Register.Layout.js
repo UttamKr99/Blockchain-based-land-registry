@@ -1,49 +1,37 @@
-import React, { useState } from 'react'
-import RegisterPage from './Register'
+import React, { useState } from 'react';
+import RegisterPage from './Register';
+import Img from '../assets/Images/Login.jpg';
+import '../assets/Css/Layouts/Register.css';
 function RegisterLayout() {
-  const [role, setRole] = useState('')
-  const [setOpen, setClosed] = useState(false)
-  const toggle = () => {
-       if (role !== '') setClosed(!setOpen)
-  }
-  const modelHandler = (e) => {
-       setRole(e.target.value)
-  }
+     const [role, setRole] = useState('');
+     const [setOpen, setClosed] = useState(false);
+     const toggle = () => {
+          if (role !== '') setClosed(!setOpen);
+     };
+     const modelHandler = (e) => {
+          setRole(e.target.value);
+     };
 
-  return (
-       <>
-            <div className={!setOpen ? 'modal is-active' : 'modal'}>
-                 <div className="modal-background"></div>
-                 <div className="modal-card">
-                      <header className="modal-card-head">
-                           <p className="modal-card-title">Select Your Role</p>
-                      </header>
-                      <section className="modal-card-body">
-                           <div classNameName="is-flex is-justify-content-center ">
-                                <div className="select">
-                                     <select
-                                          value={role}
-                                          onChange={modelHandler}>
-                                          <option disabled default value>
-                                             Select Role
-                                          </option>
-                                          <option value="Seller">Seller</option>
-                                          <option value="Buyer">Buyer</option>
-                                     </select>
-                                </div>
-                           </div>
-                      </section>
-                      <footer className="modal-card-foot">
-                           <button
-                                className="button is-success"
-                                onClick={toggle}>
-                                Done
-                           </button>
-                      </footer>
-                 </div>
-            </div>
-            <RegisterPage user={role} />
-       </>
-  )
+     return (
+          <>
+               <div className="bgimg">
+                    <div className="columns">
+                         <div className="column is-7"></div>
+                         <div className="column is-5 mr-4">
+                              <div class="card">
+                                   <header class="card-header">
+                                        <p class="card-header-title is-size-3">
+                                             Regsiter User
+                                        </p>
+                                   </header>
+                                   <div class="card-content">
+                                        <RegisterPage user={role} />
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </>
+     );
 }
-export default RegisterLayout
+export default RegisterLayout;
